@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Guide — About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo" aria-label="Travel Guide home">
+          <span class="logo-mark" aria-hidden="true">✈</span>
+          Travel Guide
+        </a>
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Open menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-panel" id="nav-panel">
+          <nav id="main-nav" aria-label="Main">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html" aria-current="page">About</a></li>
+              <li><a href="game.html">Flag Quiz</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-actions">
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <h1>Our compass</h1>
+        <p class="lead">
+          Travel Guide blends editorial storytelling with hands-on tools — because the best trips
+          start with curiosity and a little planning magic.
+        </p>
+      </section>
+
+      <div class="two-col">
+        <article class="prose fade-in-section">
+          <h2>Why this project</h2>
+          <p>
+            This site is built for <strong>Web Technologies 1</strong>: semantic HTML, responsive CSS,
+            and modular JavaScript. Arrays drive our destination cards; event listeners power the
+            contact form; <code>localStorage</code> remembers your theme between visits.
+          </p>
+          <p>
+            On the <a href="game.html">Flag Quiz</a> page we fetch live country data from a public API
+            so every round feels fresh — with graceful fallbacks if you are offline.
+          </p>
+          <h2>Meet the team</h2>
+          <p>
+            We are <strong>Dameli</strong> and <strong>Nargiz</strong> — we split interactive pieces
+            (home carousel, about form validation, flag game) and reviewed each other’s code before
+            submission.
+          </p>
+        </article>
+
+        <div class="form-card fade-in-section">
+          <h2 style="font-family: var(--font-display); font-weight: 400; margin-top: 0">Say hello</h2>
+          <p class="prose" style="margin-top: 0; font-size: 0.95rem">
+            Tell us your dream destination. Fields marked * are required; we validate email format in
+            JavaScript before “sending”.
+          </p>
+          <form id="contact-form" novalidate>
+            <div class="form-group" data-field="name">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" autocomplete="name" />
+              <div class="error-msg" id="err-name" role="alert"></div>
+            </div>
+            <div class="form-group" data-field="email">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" autocomplete="email" />
+              <div class="error-msg" id="err-email" role="alert"></div>
+            </div>
+            <div class="form-group" data-field="destination">
+              <label for="destination">Dream destination</label>
+              <input type="text" id="destination" name="destination" placeholder="e.g. Kyoto" />
+              <div class="error-msg" id="err-destination" role="alert"></div>
+            </div>
+            <div class="form-group" data-field="message">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message"></textarea>
+              <div class="error-msg" id="err-message" role="alert"></div>
+            </div>
+            <button type="submit" class="btn btn-primary">Send message</button>
+          </form>
+          <div class="form-success" id="form-success" role="status">Thanks — your message looks great. (Demo only, not sent to a server.)</div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>Travel Guide · Web Technologies 1</p>
+        <p><strong>Dameli &amp; Nargiz</strong></p>
+      </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/about.js"></script>
+  </body>
+</html>

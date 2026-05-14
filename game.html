@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Guide — Flag Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo" aria-label="Travel Guide home">
+          <span class="logo-mark" aria-hidden="true">✈</span>
+          Travel Guide
+        </a>
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Open menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-panel" id="nav-panel">
+          <nav id="main-nav" aria-label="Main">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="game.html" aria-current="page">Flag Quiz</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-actions">
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <h1>Guess the country</h1>
+        <p class="lead">
+          Study the flag, pick the right name. Data loads from the REST Countries API — beat your
+          high score stored in <code>localStorage</code>.
+        </p>
+      </section>
+
+      <section class="game-panel fade-in-section" id="game-root">
+        <div class="game-stats">
+          <div class="stat">
+            <strong id="stat-score">0</strong>
+            <span>Score</span>
+          </div>
+          <div class="stat">
+            <strong id="stat-streak">0</strong>
+            <span>Streak</span>
+          </div>
+          <div class="stat">
+            <strong id="stat-best">0</strong>
+            <span>Best</span>
+          </div>
+        </div>
+        <p id="api-status" class="game-hint" role="status"></p>
+        <div class="flag-frame loading" id="flag-frame">
+          <img id="flag-img" alt="Flag to guess" hidden />
+        </div>
+        <p class="game-hint" id="game-hint-keys">Tip: use number keys <kbd>1</kbd>–<kbd>4</kbd> to answer quickly.</p>
+        <div class="options-grid" id="options-grid" role="group" aria-label="Country choices"></div>
+        <button type="button" class="btn btn-primary next-round-btn" id="next-btn" hidden>Next flag</button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>Travel Guide · Web Technologies 1</p>
+        <p><strong>Dameli &amp; Nargiz</strong></p>
+      </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/flag-game.js"></script>
+  </body>
+</html>

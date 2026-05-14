@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Guide — Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo" aria-label="Travel Guide home">
+          <span class="logo-mark" aria-hidden="true">✈</span>
+          Travel Guide
+        </a>
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Open menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-panel" id="nav-panel">
+          <nav id="main-nav" aria-label="Main">
+            <ul>
+              <li><a href="index.html" aria-current="page">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="game.html">Flag Quiz</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-actions">
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <h1>Wander with purpose</h1>
+        <p class="lead">
+          Curated corners of the world — inspiration, practical tips, and a playful flag challenge to
+          sharpen your geography before your next trip.
+        </p>
+      </section>
+
+      <section class="carousel-wrap fade-in-section" aria-roledescription="carousel" aria-label="Featured destinations">
+        <div class="carousel-track" id="carousel-track"></div>
+        <button type="button" class="carousel-btn prev" id="carousel-prev" aria-label="Previous slide">‹</button>
+        <button type="button" class="carousel-btn next" id="carousel-next" aria-label="Next slide">›</button>
+        <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Carousel pagination"></div>
+      </section>
+
+      <section class="fade-in-section" style="margin-top: 3rem">
+        <h2 class="sr-only">Highlights</h2>
+        <div class="card-grid" id="destination-cards"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>Travel Guide · Web Technologies 1</p>
+        <p><strong>Dameli &amp; Nargiz</strong></p>
+      </div>
+    </footer>
+
+    <div
+      class="modal-backdrop"
+      id="welcome-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="welcome-title"
+      aria-hidden="true"
+    >
+      <div class="modal">
+        <h2 id="welcome-title">Welcome back</h2>
+        <p id="welcome-body">
+          We saved your theme preference. Explore the carousel and cards below — they are built from
+          JavaScript arrays and loops.
+        </p>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-ghost" id="modal-dismiss">Close</button>
+          <a class="btn btn-primary" href="game.html">Play Flag Quiz</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>
